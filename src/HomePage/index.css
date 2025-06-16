@@ -1,0 +1,197 @@
+.bg-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/home-lg-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  width: 90%;
+  max-width: 1110px;
+}
+.home-content-container {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .home-container {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 150px;
+  }
+}
+
+.home-content {
+  width: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 32px 24px;
+  background: transparent;
+}
+
+
+@media screen and (min-width: 768px) {
+  .home-content {
+    align-items: flex-start;
+  }
+}
+
+.home-mobile-img {
+  width: 206px;
+}
+
+@media screen and (min-width: 768px) {
+  .home-mobile-img {
+    display: none;
+  }
+}
+
+.home-desktop-img {
+  width: 50%;
+  max-width: 450px;
+  margin-left: 85px;
+}
+
+@media screen and (max-width: 767px) {
+  .home-desktop-img {
+    display: none;
+  }
+}
+
+.home-heading {
+  font-family: 'Roboto';
+  font-weight: bold;
+  margin-top: 0px;
+  font-size: 36px;
+
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .home-heading {
+    font-size: 46px;
+    text-align: left;
+  }
+}
+
+.home-description {
+  font-family: 'Roboto';
+  margin-top: 36px;
+  font-size: 14px;
+  line-height: 28px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .home-description {
+    font-size: 18px;
+    margin-top: 0;
+    text-align: left;
+  }
+}
+
+.shop-now-button {
+  width: 60%;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Roboto';
+  color: white;
+  border: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 6px;
+  background-color: blue;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .shop-now-button {
+    width: 150px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+  }
+
+  .home-heading {
+    order: 1;
+  }
+  .home-description {
+    order: 2;
+  }
+  .link-item {
+    order: 3;
+    width: 100%;
+  }
+  .home-mobile-img {
+    order: 4;
+    margin-top: 16px;
+    width: 100%;
+    max-width: 320px;
+    align-self: center;
+  }
+}
+.shiny-login-btn {
+  position: relative;
+  overflow: hidden;
+  padding: 12px 30px;
+  border: none;
+  background: #1e90ff;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.shiny-login-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Shine effect */
+.shiny-login-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-20deg);
+}
+
+.shiny-login-btn:hover::before {
+  animation: shine 1.2s ease-in-out;
+}
+
+@keyframes shine {
+  from {
+    left: -75%;
+  }
+  to {
+    left: 125%;
+  }
+}

@@ -1,0 +1,123 @@
+.jobs-page{
+    display: flex;
+    flex-direction:row ;
+    background-color: black;
+    padding: 15px;
+    font-size: 18px;
+    min-height: 100vh;
+}
+.line{
+  margin: 20px 20px 5px 5px;
+}
+.jobs-header{
+    width: 25%;
+    color: white;
+    /* background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png'); */
+    height: 45%;
+    padding: 20px;
+
+}
+.loading-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.jobsList{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    align-items: start;
+
+
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+/* Animated input styling */
+.jobsList input[type="text"] {
+  width: 40%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid #007bff;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background: #fff;
+  color: #222;
+  margin-bottom: 24px;
+  margin-left: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  position: relative;
+}
+
+.jobsList input[type="text"]:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 8px #007bff44;
+}
+
+.jobsList input[type="text"]::placeholder {
+  color: #888;
+  opacity: 1;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.jobsList input[type="text"]:focus::placeholder {
+  color: #007bff;
+  transform: translateY(-6px) scale(0.95);
+  opacity: 0.7;
+}
+.filter{
+    color: white;
+    font-size: 15px;
+}
+.jobs-header-content{
+    background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+    background-size: cover;
+    height: 45%;
+    padding: 40px;
+    margin-top: 20px;
+    color: black;
+}
+/* Responsive layout for small screens */
+@media screen and (max-width: 767px) {
+  .jobs-page {
+    flex-direction: column;
+    padding: 8px;
+  }
+
+  .jobs-header {
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+    background: none;
+  }
+
+  .jobs-header-content {
+    margin-top: 0;
+    padding: 12px 0;
+    background-size: cover;
+    border-radius: 8px;
+  }
+
+  .filter {
+    width: 100%;
+    margin-top: 0;
+    padding: 12px 0;
+    background: none;
+  }
+
+  .jobsList {
+    width: 100%;
+    padding-left: 0;
+    align-items: stretch;
+  }
+
+  .jobsList input[type="text"] {
+    width: 100%;
+    margin-left: 0;
+  }
+}
